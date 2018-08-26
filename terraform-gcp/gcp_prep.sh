@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# GCP preparation script
+# GCP preparation script, creates what's needed to get you started using GCP and terraform.
 #
 
 # Changes these variables if needed
@@ -10,14 +10,14 @@ PROJECT_NAME="Sandbox"
 SA_ACC_NAME="terraform"
 
 if ! command -v gcloud; then
-    echo "Please install gloud or make sure you installed it correctly.."
+    echo "Please install gloud or make sure you've installed it correctly.."
     exit 1
 elif ! command -v terraform; then
-    echo "Please install terraform or make sure you installed it correctly.."
+    echo "Please install terraform or make sure you've installed it correctly.."
     exit 1
 fi
 
-echo "Checking for updates.."
+echo "Checking for gcloud tool updates.."
 gcloud components update
 
 echo "Trying to install the alpha commands.."
