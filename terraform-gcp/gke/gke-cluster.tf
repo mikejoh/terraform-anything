@@ -31,4 +31,8 @@ node_config {
     "https://www.googleapis.com/auth/monitoring"
   ]
  }
+
+ provisioner "local-exec" {
+    command = "gcloud container clusters get-credentials ${var.cluster_name}"
+ }
 }
